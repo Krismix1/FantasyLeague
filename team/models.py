@@ -15,4 +15,4 @@ class Footballer(models.Model):
     total_points = models.PositiveIntegerField(default=0)
 
     def __str__(self):
-        return self.first_name + " " + self.last_name + " " + self.real_team
+        return self.first_name + " " + self.last_name + " " + self.real_team + " " + str(self.price)
