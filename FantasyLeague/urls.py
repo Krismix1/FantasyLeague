@@ -16,10 +16,14 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 import homepage.views
+import account.views
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^team/', include('team.urls')),
     url(r'^$', homepage.views.index),
+    url(r'^login/', account.views.login),
+    url(r'^register/', account.views.register),
+    url(r'^forgot-password/', account.views.forgot_password),
 ]
